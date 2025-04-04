@@ -7,7 +7,7 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Your Apps</h1>
+    <h1>Your Garage</h1>
     <a href="/users/<%=user._id%>/cars/new">Add New Car</a>
 
 
@@ -16,7 +16,7 @@
     <li>
       
       <a href="/users/<%= user._id %>/cars/<%= car._id %>">
-        <%= car.model %> at <%= car.make %>
+        <%= car.make %>  <%= car.model %>
       </a>
     </li>
     <% }) %>

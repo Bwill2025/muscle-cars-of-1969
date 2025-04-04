@@ -7,18 +7,18 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= car.model %> at <%= car.make %></h1>
+    <h1><%= car.make%>  <%= car.model %></h1>
   
 
     <a href="/users/<%= user._id %>/cars/<%= car._id %>/edit">
-        Edit this car
+        Modify this car
       </a>
 
     <form
     action="/users/<%= user._id %>/cars/<%= car._id %>?_method=DELETE"
     method="POST"
   >
-    <button type="submit">Delete this car</button>
+    <button type="submit">Send to junkyard</button>
   </form>
 
   </body>
