@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editing <%= car.model %></title>
+</head>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <h1>Edit <%= car.model %> at <%= car.make %></h1>
+  <form
+    action="/users/<%= user._id %>/cars/<%= car._id %>?_method=PUT"
+    method="POST"
+  >
+    <label for="make">Make:</label>
+    <select id="make" name="make">
+        <option
+        value="Mercury"
+        <%= car.make === "Mercury" ? "selected" : "" %>
+      >
+        Mercury
+      </option>
+      <option
+        value="Chrysler"
+        <%= car.make === "Chrysler" ? "selected" : "" %>
+      >
+      Chrysler
+      </option>
+      <option
+        value="Chevrolet"
+        <%= car.make === "Chevrolet" ? "selected" : "" %>
+      >
+      Chevrolet
+      </option>
+      <option
+        value="Ford"
+        <%= car.make === "Ford" ? "selected" : "" %>
+      >
+      Ford
+      </option>
+      <option
+        value="Pontiac"
+        <%= car.make === "Pontiac" ? "selected" : "" %>
+      >
+      Pontiac
+      </option>
+      <option
+        value="AMC"
+        <%= car.make === "AMC" ? "selected" : "" %>
+      >
+      AMC
+      </option>
+      <option
+        value="Buick"
+        <%= car.make === "Buick" ? "selected" : "" %>
+      >
+      Buick
+      </option>
+      <option
+        value="Oldsmobile"
+        <%= car.make === "Oldsmobile" ? "selected" : "" %>
+      >
+      Oldsmobile
+      </option>
+    </select>
+    <label for="model">Model:</label>
+    <input type="text" name="model" id="model" value="<%= car.model %>">
+    
+    <label for="enigine">Engine:</label>
+    <select id="enigine" name="engine">
+      <option
+        value="V-6"
+        <%= car.engine === "V-6" ? "selected" : "" %>
+      >
+        V-6
+      </option>
+      <option
+        value="V-8"
+        <%= car.engine === "V-8" ? "selected" : "" %>
+      >
+        V-8
+      </option>
+
+      <label for="transmission">Transmission:</label>
+    <select id="transmission" name="transmission">
+      <option
+        value="Manual"
+        <%= car.transmission === "Manual" ? "selected" : "" %>
+      >
+        Manual
+      </option>
+      <option
+        value="Automatic"
+        <%= car.transmission === "Automatic" ? "selected" : "" %>
+      >
+        Automatic
+      </option>
+     
+      
+    </select>
+    <button type="submit">Update Application</button>
+  </form>
+</body>
+</html>
