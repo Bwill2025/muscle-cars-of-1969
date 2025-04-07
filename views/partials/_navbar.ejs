@@ -1,9 +1,24 @@
+<!-- views/partials/_navbar.ejs -->
+
 <nav>
     <% if(user) { %>
-    <a href="/users/<%= user._id %>/cars">Your Cars</a>
-    <a href="/auth/sign-out">Sign Out</a>
+    <div class="navbar">
+      <h1 id="nav-header">Muscle Cars of 1969</h1>
+      <div class="nav-links">
+        <a class="authlink" href="/users/<%=user._id%>/cars"
+          >Your Cars</a
+        >
+        <a class="authlink" href="/auth/sign-out">Sign Out</a>
+      </div>
+    </div>
     <% } else { %>
-    <a href="/auth/sign-in">Sign In</a>
-    <a href="/auth/sign-up">Sign Up</a>
+    <div class="navbar">
+      <h1 id="nav-header">Vrooom Vroooom</h1>
+      <div class="nav-links">
+        <a class="authlink" href="/auth/sign-in">Start your Engines/Sign In</a>
+        <a class="authlink" href="/auth/sign-up">Get your Keys/Sign Up</a>
+      </div>
+    </div>
     <% } %>
   </nav>
+  

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
   <title>Editing <%= car.model %></title>
 </head>
 <body>
@@ -66,8 +67,8 @@
     <label for="model">Model:</label>
     <input type="text" name="model" id="model" value="<%= car.model %>">
     
-    <label for="enigine">Engine:</label>
-    <select id="enigine" name="engine">
+    <label for="engine">Engine:</label>
+    <select id="engine" name="engine">
       <option
         value="V-6"
         <%= car.engine === "V-6" ? "selected" : "" %>
@@ -80,7 +81,7 @@
       >
         V-8
       </option>
-
+    </select>
       <label for="transmission">Transmission:</label>
     <select id="transmission" name="transmission">
       <option
@@ -98,7 +99,14 @@
      
       
     </select>
-    <button type="submit">Update Application</button>
+    <label for="carPics">Car Pics:</label>
+    <input
+      type="text"
+      name="carPics"
+      id="carPics"
+      value="<%= car.carPics %>"
+    >
+    <button type="submit">Update Car</button>
   </form>
 </body>
 </html>

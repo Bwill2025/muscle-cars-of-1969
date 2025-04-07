@@ -19,7 +19,8 @@ const carSchema = mongoose.Schema({
     type: String,
     enum: ['Manual', 'Automatic'],
     required: true,
-  }
+  },
+  carPics: String,
 })
 
 
