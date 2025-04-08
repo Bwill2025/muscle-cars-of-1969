@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
     <title><%= car.model %></title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <div class="show-body">
+        <div class="show-header">
     <h1><%= car.make%>  <%= car.model %></h1>
+    <div class="show-sidebar">
+        <div class="show-actions">
     <p>Engine Type: <%= car.enigine %></p>
     <p>Transmission Type: <%= car.transmission %></p>
 
     <% if (car.carPics) { %>
-        <a href="<%= car.carPics.startsWith('http') ? car.carPics : `https://${car.carPics}` %>">Post car pics</a>
+        <a href="<%= car.carPics.startsWith('http') ? car.carPics : `https://${car.carPics}` %>">Posted car pics</a>
         <% } %>
 
     <a href="/users/<%= user._id %>/cars/<%= car._id %>/edit">
@@ -26,6 +30,12 @@
   >
     <button type="submit">Send to junkyard</button>
   </form>
+</div>
+    </div>
+        </div>
+    </div>
+
+
 
   </body>
 </html>

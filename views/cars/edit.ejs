@@ -8,6 +8,7 @@
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
+  <div class="edit-body">
   <h1>Edit <%= car.model %> at <%= car.make %></h1>
   <form
     action="/users/<%= user._id %>/cars/<%= car._id %>?_method=PUT"
@@ -108,5 +109,6 @@
     >
     <button type="submit">Update Car</button>
   </form>
+  </div>
 </body>
 </html>

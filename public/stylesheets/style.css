@@ -2,16 +2,30 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-
-
-
 .index-body {
-    background-image: url('https://img.freepik.com/premium-vector/drawing-red-car-with-license-plate-number-2_1316704-60122.jpg');
+    background-image:url('https://media.istockphoto.com/id/648247912/photo/empty-factory-interior.jpg?s=612x612&w=0&k=20&c=rhSmrRBVhff3m1cmyylj1EkFnCVkS7bvI3_HGFl0Qws=');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
     width: 100vw;
-    color: rgb(36, 16, 16);
+    color: rgb(178, 136, 136);
+    margin: 50px 100px 0px 20px;
+    
+}
+
+
+
+
+
+
+
+.home-body {
+    background-image: url('https://cdn.dealeraccelerate.com/survivor/1/1097/97829/1920x1440/1969-chevrolet-camaro-coupe');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    color: rgb(178, 136, 136);
     margin: 50px 100px 0px 20px;
   }
   
@@ -74,7 +88,7 @@
     background-color: #ffffff;
   }
   
-  /* public/stylesheets/partials.css */
+ 
 
 .navbar {
     display: flex;
@@ -101,7 +115,7 @@
   .authlink:hover {
     color: white;
   }
-  /* public/stylesheets/style.css */
+ 
 
 .signin-container,
 .signup-container {
@@ -114,16 +128,21 @@
 }
 
 h1 {
-  color: #1c2e5b;
+  color: #fd1b1b;
+  justify-content: center;
+  text-align: center;
 }
 
 form {
+  background-image:url("https://www.motales.com/pics/plants/windsor/cars/00WAP6937.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-2");
+  background-repeat: no-repeat;
+    background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 20em;
-  height: 50%;
-  background-color: #f6e7e7;
+  width: 60em;
+  height: 100%;
+  background-color: #f6f6e7;
   padding: 30px 40px 20px 40px;
   border-radius: 20px;
   color: #4b598e;
@@ -145,3 +164,95 @@ button {
   margin: 15px 0;
   font-size: 1.1em;
 }
+
+
+.all-apps-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .all-apps-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 90%;
+  }
+  
+  .add-app-link {
+    padding: 10px;
+    background-color: #ce4866;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1em;
+    padding: 2px 25px;
+    text-decoration: none;
+  }
+  
+  .add-app-link:hover {
+    background-color: #e84a6c;
+  }
+  
+
+ul {
+    list-style: none;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ul > a {
+    text-decoration: none;
+    color: #1c2e5b;
+    width: 50%;
+    background-color: #f6e7e7;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 15px 0;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  ul > a:hover {
+    background-color: #4b598e;
+    color: white;
+  }
+  
+
+.new-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .new-body > form,
+  .edit-body > form {
+    height: 70%;
+  }
+  
+  textarea,
+  select {
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  select {
+    margin-bottom: 10px;
+  }
+  
+  .edit-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  

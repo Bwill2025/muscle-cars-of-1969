@@ -6,22 +6,25 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Your Cars</title>
   </head>
-  <body>
+  <body class="index-body">
     <%- include('../partials/_navbar.ejs') %>
+    
+    <div class="all-apps-body">
+        <div class="all-apps-header">
     <h1>Your Garage</h1>
     <a href="/users/<%=user._id%>/cars/new">Add New Car</a>
 
-
+</div>
 <ul>
     <% cars.forEach((car)=>{ %>
-    <li>
+    
       
       <a href="/users/<%= user._id %>/cars/<%= car._id %>">
-        <%= car.make %>  <%= car.model %>
+        <li> <%= car.make %>  <%= car.model %>
       </a>
     </li>
     <% }) %>
   </ul>
-  
+  </div>
   </body>
 </html>
